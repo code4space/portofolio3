@@ -28,7 +28,7 @@ function CaseStudyBlock({ cs, flip }: { cs: CaseStudy; flip: boolean }) {
       {/* Ghost numeral bleeding off the composition */}
       <span
         aria-hidden
-        className={`pointer-events-none absolute -top-[7rem] z-0 hidden select-none font-display text-[13rem] font-light leading-none lg:block ${
+        className={`pointer-events-none absolute -top-28 z-0 hidden select-none font-display text-[13rem] font-light leading-none lg:block ${
           flip ? "-right-8" : "-left-8"
         }`}
         style={{ WebkitTextStroke: "1px var(--line-strong)", color: "transparent" }}
@@ -48,8 +48,8 @@ function CaseStudyBlock({ cs, flip }: { cs: CaseStudy; flip: boolean }) {
           data-cursor
           className="group relative block overflow-hidden border border-line bg-bg-soft"
         >
-          <div className="relative aspect-[16/11] overflow-hidden">
-            <motion.div style={{ y }} className="absolute -inset-y-[8%] inset-x-0">
+          <div className="relative aspect-16/11 overflow-hidden">
+            <motion.div style={{ y }} className="absolute inset-y-[-8%] inset-x-0">
               <Image
                 src={cs.image}
                 alt={cs.alt}
@@ -182,7 +182,7 @@ function Archive() {
         <AnimatePresence>
           {hovered !== null && (
             <motion.div
-              className="pointer-events-none fixed left-0 top-0 z-[70] w-72 overflow-hidden border border-line shadow-2xl"
+              className="pointer-events-none fixed left-0 top-0 z-70 w-72 overflow-hidden border border-line shadow-2xl"
               style={{ x: px, y: py }}
               initial={{ opacity: 0, scale: 0.92, rotate: -3 }}
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
@@ -207,7 +207,7 @@ function Archive() {
 export default function Projects() {
   return (
     <section id="work" className="relative px-6 py-20 md:px-10 md:py-28">
-      <div className="mx-auto max-w-[88rem]">
+      <div className="mx-auto max-w-352">
         <SectionHeading
           index="03"
           eyebrow="Selected work"
@@ -217,7 +217,7 @@ export default function Projects() {
               like <em className="text-accent">products.</em>
             </span>,
           ]}
-          annotation="public work you can click — the enterprise systems live one section below"
+          annotation="public work you can click — the enterprise evidence follows below"
         />
 
         <div className="mt-14 flex flex-col gap-24 md:mt-20 md:gap-36">

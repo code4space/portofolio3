@@ -119,7 +119,7 @@ export default function Preloader() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.15, ease: EASE }}
           >
-            full-stack engineer &amp; designer
+            software engineer
           </motion.span>
           <motion.span
             className="mt-8 block h-px w-full max-w-md"

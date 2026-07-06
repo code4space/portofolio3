@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 import { Reveal } from "@/components/reveal";
 import SectionHeading from "@/components/section-heading";
 import Stat from "@/components/stat";
@@ -19,14 +20,36 @@ export default function About() {
               to <em className="text-accent">production.</em>
             </span>,
           ]}
-          annotation="designer first — engineer by conviction"
+          annotation="an engineer with a designer’s reflexes"
         />
 
         <div className="mt-12 grid gap-12 md:mt-16 lg:grid-cols-12">
-          {/* Index card — sticky on large screens */}
+          {/* Portrait + index card — sticky on large screens */}
           <div className="lg:col-span-4">
             <Reveal className="lg:sticky lg:top-28">
-              <dl className="border border-line bg-bg-soft/60 p-7 backdrop-blur-sm">
+              <figure className="group relative overflow-hidden border border-line">
+                <div className="relative aspect-[4/5] overflow-hidden">
+                  <Image
+                    src="/me_black_white.png"
+                    alt="Portrait of William Wijaya"
+                    fill
+                    sizes="(min-width: 1024px) 28vw, 100vw"
+                    className="object-cover grayscale transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                    style={{ objectPosition: "50% 30%" }}
+                  />
+                  {/* Warm the blacks into the canvas */}
+                  <div aria-hidden className="absolute inset-0 bg-accent/10 mix-blend-soft-light" />
+                  <div aria-hidden className="absolute inset-0 bg-linear-to-t from-bg/40 via-transparent to-transparent" />
+                </div>
+                <figcaption className="flex items-center justify-between border-t border-line px-4 py-2.5">
+                  <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink-faint">
+                    fig. 00 — the engineer
+                  </span>
+                  <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse-dot" aria-hidden />
+                </figcaption>
+              </figure>
+
+              <dl className="mt-5 border border-line bg-bg-soft/60 p-7 backdrop-blur-sm">
                 <div className="eyebrow mb-5">Dossier</div>
                 {about.facts.map((fact) => (
                   <div

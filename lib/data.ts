@@ -1,6 +1,6 @@
 /* ————————————————————————————————————————————————
    Single source of truth for all portfolio content.
-   Edit copy here — components only handle presentation.
+   Edit copy here; components only handle presentation.
    Sources: resume.pdf + Mitraplus engineering portfolio.
 ———————————————————————————————————————————————— */
 
@@ -8,7 +8,7 @@ export const site = {
   name: "William Wijaya",
   firstName: "William",
   lastName: "Wijaya",
-  role: "Full-stack Engineer & Designer",
+  role: "Software Engineer",
   location: "Jakarta, Indonesia",
   timezoneLabel: "GMT+7",
   timezone: "Asia/Jakarta",
@@ -25,25 +25,25 @@ export const site = {
 
 export const hero = {
   statement:
-    "I design and build enterprise-grade products — from the database schema to the last pixel.",
-  sub: "Three years modernizing ERP, service, and finance platforms at Mitraplus, on a foundation of five years of visual design discipline.",
+    "I build enterprise-grade software, from the database schema to the last pixel.",
+  sub: "Three years modernizing ERP, service, and finance platforms at Mitraplus, with the product sense that five years of design practice builds in.",
 };
 
 export const about = {
   facts: [
     { label: "Name", value: "William Wijaya" },
-    { label: "Role", value: "Full-stack Engineer" },
+    { label: "Role", value: "Software Engineer" },
     { label: "Base", value: "Jakarta, ID" },
     { label: "Focus", value: "Enterprise platforms" },
     { label: "Currently", value: "Mitraplus" },
     { label: "Status", value: "Open to work" },
   ],
   lead:
-    "I didn’t start in engineering. I started behind Photoshop — retouching thousands of production images and designing brand work for clients, where the only metric that mattered was how the result felt. That training never left.",
+    "I didn’t start in engineering. I started behind Photoshop, retouching thousands of production images and designing brand work for clients, where the only metric that mattered was how the result felt. That training never left.",
   pullQuote: "Most software works. Very little of it feels considered. I live in that gap.",
   body: [
-    "In 2022 I went through Hacktiv8’s immersive full-stack JavaScript program and joined Mitraplus as a full-stack developer. Since then I’ve helped carry the company from legacy PHP systems to modern, containerized TypeScript platforms — designing the interfaces, building the APIs behind them, and shaping the database models underneath.",
-    "My rule is simple: the interface earns a user’s trust and the architecture keeps it. So I sweat both — component boundaries and kerning, transaction patterns and easing curves. Scalable systems and honest craftsmanship, in equal measure.",
+    "In 2022 I went through Hacktiv8’s immersive full-stack JavaScript program and joined Mitraplus as a full-stack developer. Since then I’ve helped carry the company from legacy PHP systems to modern, containerized TypeScript platforms, designing the interfaces, building the APIs behind them, and shaping the database models underneath.",
+    "My rule is simple: the interface earns a user’s trust and the architecture keeps it. So I sweat both: component boundaries and kerning, transaction patterns and easing curves. Scalable systems and honest craftsmanship, in equal measure.",
   ],
   stats: [
     { value: 3, suffix: "+", label: "Years shipping production software" },
@@ -138,8 +138,8 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     index: "06",
-    name: "Design",
-    blurb: "Where I started, and why the details look right.",
+    name: "Design & Product",
+    blurb: "No longer my title, permanently my advantage.",
     items: [
       "Figma",
       "Adobe Photoshop",
@@ -169,58 +169,58 @@ export type CaseStudy = {
 
 export const featured: CaseStudy[] = [
   {
-    id: "erp",
+    id: "ERP-template",
     index: "01",
-    title: "ERP System",
-    year: "2023",
-    role: "Design & full-stack",
-    tagline: "A public demo distilling the ERP patterns I build professionally — operations, end to end.",
+    title: "Modern ERP Template",
+    year: "2026",
+    role: "Frontend architecture",
+    tagline: "A reusable enterprise scaffold (dashboard, users, roles, and inventory) distilled from production ERP UI.",
     problem:
-      "Operations lived in scattered spreadsheets — data entry, inventory, and reporting never quite agreed with each other, and every reconciliation cost hours.",
+      "Every ERP-style engagement started by rebuilding the same shell (dashboard, auth-gated sections, role and inventory screens, a component catalog) before any real feature work could begin.",
     approach:
-      "A single React front end over a Node.js API and MongoDB, with complete flows for inputting, managing, and reporting on operational data — the same grid, form, and workflow patterns I ship in production ERP systems.",
+      "A React 19 single-page app on TanStack Router and TanStack Query, with an MUI component layer covering dashboards, users, roles, inventory, and a living components catalog, the same layout and data-fetching patterns I use on client ERP builds, kept backend-agnostic.",
     impact:
-      "One consistent source of truth from first input to final report, packaged as a demo-ready platform.",
-    stack: ["React", "Node.js", "Express", "MongoDB"],
-    link: "https://demo-erp-gray.vercel.app/",
+      "A drop-in enterprise shell that turns a blank repo into a working, navigable ERP frontend in minutes instead of days.",
+    stack: ["React", "TanStack Router", "TanStack Query", "MUI", "TypeScript"],
+    link: "https://frontend-template-red.vercel.app/",
     image: "/projects/erp.png",
-    alt: "ERP System dashboard interface",
+    alt: "Enterprise frontend template dashboard interface",
+  },
+  {
+    id: "logistik",
+    index: "02",
+    title: "Logistik Web Client",
+    year: "2025",
+    role: "End-to-end build",
+    tagline: "A trilingual freight-forwarder marketing site for sea, air, and land cargo, one consistent brand.",
+    problem:
+      "A freight-forwarding company needed a public site that could carry its brand across three languages and three cargo lines (sea, air, land) without turning into three disconnected microsites.",
+    approach:
+      "A Next.js app with locale-scoped routing for Indonesian, English, and Chinese, shared service and cargo-line templates for sea/air/land freight, plus news, gallery, and contact flows, animated with Framer Motion and GSAP, styled with Tailwind and Radix UI, and tuned for SEO with per-locale metadata, sitemap, and OG images.",
+    impact:
+      "One codebase serving three markets with consistent branding, cinematic loading, and SEO groundwork instead of duplicated per-language builds.",
+    stack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion", "Radix UI"],
+    link: "https://logistik-3.vercel.app/",
+    image: "/projects/logistik.png",
+    alt: "Logistik Web Client freight services homepage",
   },
   {
     id: "pokemon",
-    index: "02",
+    index: "03",
     title: "Pokémon Collection",
     year: "2023",
-    role: "Full-stack & game design",
+    role: "Full-stack & realtime",
     tagline: "A real-time collection game with gacha mechanics, battles, and online multiplayer.",
     problem:
       "Turn-based play is easy; making it feel alive across two browsers is not. The game needed live state synchronization in both online and local modes.",
     approach:
       "A WebSocket layer over Express keeps battles in sync in real time, MongoDB persists every collection, and the gacha system is tuned to feel fair but exciting. Local mode degrades gracefully when no server is running.",
     impact:
-      "A complete game loop — collect, roll, battle — that holds up with two players hammering it at once.",
+      "A complete game loop (collect, roll, battle) that holds up with two players hammering it at once.",
     stack: ["React", "Vite", "Express", "WebSocket", "MongoDB", "PokéAPI"],
     link: "https://pokemon-collection-game.vercel.app/",
     image: "/projects/pokemon.png",
     alt: "Pokémon Collection game interface",
-  },
-  {
-    id: "admin",
-    index: "03",
-    title: "Admin Dashboard",
-    year: "2024",
-    role: "Design & frontend",
-    tagline: "A production-grade admin template with real-time visualization and user management.",
-    problem:
-      "Every engagement was rebuilding the same dashboard scaffolding — charts, tables, roles, layout — from zero, again and again.",
-    approach:
-      "A responsive, typed React and Tailwind template with ECharts-driven interactive visualizations and user-management patterns, structured to be lifted straight into client work.",
-    impact:
-      "New dashboards now start at eighty percent done instead of zero — a reusable foundation across projects.",
-    stack: ["React", "TypeScript", "Tailwind CSS", "ECharts"],
-    link: "https://admin-two-tau.vercel.app/",
-    image: "/projects/admin.png",
-    alt: "Admin dashboard with charts and analytics",
   },
 ];
 
@@ -234,6 +234,14 @@ export type ArchiveProject = {
 };
 
 export const archive: ArchiveProject[] = [
+  {
+    title: "Admin System",
+    year: "2023",
+    description: "An earlier public demo of ERP data-entry, inventory, and reporting flows over Node.js and MongoDB.",
+    stack: "React · Node.js · Express · MongoDB",
+    link: "https://demo-erp-gray.vercel.app/",
+    image: "/projects/erp-legacy.png",
+  },
   {
     title: "Stackun",
     year: "2022",
@@ -252,93 +260,45 @@ export const archive: ArchiveProject[] = [
   },
 ];
 
-/* ——— Enterprise engineering at Mitraplus ——— */
+/* ——— Why hire me: claims backed by production evidence ———
+   Each claim is [pre, accent, post] so the accent word can be set
+   in italic gold without JSX living in the data layer. */
 
-export type PlatformStage = {
+export type ImpactClaim = {
   index: string;
-  years: string;
-  name: string;
-  kind: string;
-  summary: string;
-  stack: string[];
-  legacy?: boolean;
-  highlight?: boolean;
+  claim: [pre: string, accent: string, post: string];
+  evidence: string;
 };
 
-export const enterprise = {
-  intro:
-    "At Mitraplus I helped move the company off a legacy PHP baseline and onto modern, containerized TypeScript platforms — three generations of enterprise systems, each one raising the engineering bar.",
-  stages: [
-    {
-      index: "00",
-      years: "Baseline",
-      name: "Legacy BOS",
-      kind: "Where it started",
-      summary:
-        "A custom PHP workshop system — direct SQL wrappers, session auth, no tests, no CI, manual releases.",
-      stack: ["PHP", "Direct SQL", "Sessions"],
-      legacy: true,
-    },
+export const impact = {
+  claims: [
     {
       index: "01",
-      years: "2023",
-      name: "Asama",
-      kind: "First modern ERP",
-      summary:
-        "Separated React and Express apps covering purchasing, warehouse, invoicing, AP/AR, and GL reporting — and the company’s first Dockerized CI/CD delivery.",
-      stack: ["React 18", "Express", "SQL Server", "Redux", "Docker + Actions"],
+      claim: ["I raise the ", "engineering bar", " wherever I land."],
+      evidence:
+        "Joined a company on a legacy PHP baseline; left behind three generations of typed, containerized platforms, with CI quality gates, 59+ test files, and ~100 architecture docs the team still builds on.",
     },
     {
       index: "02",
-      years: "2024 — 26",
-      name: "Sanden",
-      kind: "Multi-app enterprise system",
-      summary:
-        "An internal ERP, a customer-facing portal, and a typed Bun/Express API across trading, service, finance, and GL — with Redis auth caching and BullMQ background workers.",
-      stack: ["TypeScript", "Bun", "Sequelize / MSSQL", "Redis", "BullMQ", "React 19"],
+      claim: ["I own systems ", "end to end.", ""],
+      evidence:
+        "Interface, API, data model, deployment pipeline: one pair of hands, 2,663 commits across eight production repositories spanning ERP, finance, insurance, and customer portals.",
     },
     {
       index: "03",
-      years: "2026",
-      name: "Bengkel",
-      kind: "Framework-driven platform",
-      summary:
-        "A documented, layered workshop-and-insurance platform: typed contracts, RBAC, audit events, object storage, notifications — gated by CI that runs tests, audits, and secret scans before every release.",
-      stack: ["PostgreSQL", "TanStack", "RBAC", "MinIO", "CI quality gates"],
-      highlight: true,
+      claim: ["I make complex domains ", "feel simple.", ""],
+      evidence:
+        "Purchasing to general ledger, insurance claims to work orders: enterprise workflows turned into screens that non-technical staff use every day, without a manual.",
     },
-  ] as PlatformStage[],
-  metrics: [
-    { value: 2663, label: "Commits under my hand across the modern repositories" },
-    { value: 59, suffix: "+", label: "Test files where the legacy baseline had none" },
-    { value: 8, label: "CI/CD pipelines building, scanning, and shipping images" },
-    { value: 100, prefix: "~", label: "Architecture & workflow docs written for the teams" },
-  ],
-  note: "These systems run private business operations, so there are no public links — I’m glad to walk through the architecture in conversation.",
+    {
+      index: "04",
+      claim: ["I ship with a ", "designer’s eye", ", built in."],
+      evidence:
+        "Five years of professional visual design before engineering. Product thinking, UX judgment, and pixel discipline come standard; no handoff required.",
+    },
+  ] as ImpactClaim[],
+  note: "The systems behind these claims run private business operations; I’m glad to walk through their architecture in conversation.",
 };
-
-export const processSteps = [
-  {
-    index: "01",
-    title: "Understand",
-    body: "Business needs become actionable scope. The right problem, written down clearly, is half the build.",
-  },
-  {
-    index: "02",
-    title: "Design",
-    body: "Interface first, in Figma. If it doesn’t make sense as pixels, it won’t make sense as code.",
-  },
-  {
-    index: "03",
-    title: "Build",
-    body: "Typed, componentized, API-first. Boring choices where possible, sharp ones where it counts.",
-  },
-  {
-    index: "04",
-    title: "Ship & iterate",
-    body: "Deployed early, behind CI gates and feedback loops. Done isn’t when it works — it’s when it feels right.",
-  },
-];
 
 export type Milestone = {
   period: string;
@@ -359,7 +319,7 @@ export const milestones: Milestone[] = [
     kind: "Work",
     current: true,
     summary:
-      "Built three generations of enterprise platforms — Asama, Sanden, and Bengkel — modernizing the company from legacy PHP to typed, containerized systems with CI/CD, RBAC, and documented architecture. 2,600+ commits across ERP, service, finance, and customer-portal applications.",
+      "Built three generations of enterprise platforms (Asama, Sanden, and Bengkel), modernizing the company from legacy PHP to typed, containerized systems with CI/CD, RBAC, and documented architecture. 2,600+ commits across ERP, service, finance, and customer-portal applications.",
   },
   {
     period: "Jun — Oct 2022",
@@ -368,7 +328,7 @@ export const milestones: Milestone[] = [
     org: "Hacktiv8",
     kind: "Education",
     summary:
-      "Immersive bootcamp — shipped full-stack projects weekly across React, Node.js, SQL and NoSQL, under production-style deadlines.",
+      "Immersive bootcamp: shipped full-stack projects weekly across React, Node.js, SQL and NoSQL, under production-style deadlines.",
   },
   {
     period: "Aug 2021 — Jun 2022",
@@ -377,7 +337,7 @@ export const milestones: Milestone[] = [
     org: "Freelance",
     kind: "Freelance",
     summary:
-      "Banners, posters, and brand work for a range of clients — composition, creative effects, and brand consistency delivered against real deadlines.",
+      "Banners, posters, and brand work for a range of clients: composition, creative effects, and brand consistency delivered against real deadlines.",
   },
   {
     period: "Apr 2021 — Jun 2022",
@@ -386,31 +346,22 @@ export const milestones: Milestone[] = [
     org: "Mindreach",
     kind: "Work",
     summary:
-      "High-volume retouching and color correction to strict brand standards — the years where pixel discipline became a habit.",
+      "High-volume retouching and color correction to strict brand standards, the years where pixel discipline became a habit.",
   },
 ];
 
-/* PLACEHOLDER quotes — modeled on real feedback themes from client work
-   (dedication, collaboration, design care). Replace with verbatim quotes
-   and real attributions before going live. */
 export const testimonials = [
   {
     quote:
-      "William doesn’t just build what you ask for; he understands why you’re asking, pushes back where it matters, and the product comes out better for it.",
-    name: "Product Owner",
-    context: "Client engagement · Mitraplus",
-  },
-  {
-    quote:
-      "It’s rare to find an engineer who sweats the pixels this much. Handoffs stopped being handoffs, he simply took care of the whole thing.",
-    name: "Design Lead",
-    context: "Agency collaboration",
+      "He translated our business goals into a product that works exactly the way stakeholders need, while keeping the technical team aligned and focused.",
+    name: "Endru Prajaya",
+    context: "Business Analyst · Mitraplus",
   },
   {
     quote:
       "Fast, communicative, and calm under deadline pressure. The kind of developer you plan the next project around.",
-    name: "Project Manager",
-    context: "Mitraplus",
+    name: "Wahyudhi",
+    context: "Project Manager · Mitraplus",
   },
 ];
 

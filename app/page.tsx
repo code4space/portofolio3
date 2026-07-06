@@ -2,7 +2,7 @@ import Nav from "@/components/nav";
 import Preloader from "@/components/preloader";
 import About from "@/components/sections/about";
 import Contact from "@/components/sections/contact";
-import Enterprise from "@/components/sections/enterprise";
+import Impact from "@/components/sections/impact";
 import Experience from "@/components/sections/experience";
 import Hero from "@/components/sections/hero";
 import Projects from "@/components/sections/projects";
@@ -19,7 +19,7 @@ export default function Home() {
         <About />
         <Skills />
         <Projects />
-        <Enterprise />
+        <Impact />
         <Experience />
         <Testimonials />
         <Contact />

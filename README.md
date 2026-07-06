@@ -19,7 +19,7 @@ Built with Next.js 16 (App Router), Tailwind CSS v4, Motion (Framer Motion 12), 
 | About (dossier card, drop cap, stats) | `components/sections/about.tsx` |
 | Capabilities (accordion) | `components/sections/skills.tsx` |
 | Selected work (case studies + archive) | `components/sections/projects.tsx` |
-| Enterprise engineering (Mitraplus modernization arc) | `components/sections/enterprise.tsx` |
+| Why hire me (claims + production evidence) | `components/sections/impact.tsx` |
 | Experience (scroll-drawn timeline) | `components/sections/experience.tsx` |
 | Voices (testimonials) | `components/sections/testimonials.tsx` |
 | Contact + footer | `components/sections/contact.tsx` |
@@ -35,10 +35,16 @@ never intersect).
 **All copy lives in [`lib/data.ts`](lib/data.ts)** — projects, case studies, experience,
 skills, testimonials, contact details. Components are presentation only.
 
-> ⚠️ The testimonials in `lib/data.ts` are placeholders modeled on real feedback themes.
-> Replace them with verbatim quotes and real attributions before going live.
+Positioning: the site brands William as a **Software Engineer**; the design
+background appears only as copywriting flavor ("a designer's eye"), never as a title.
 
-Assets: project screenshots in `public/projects/`, résumé at `public/resume.pdf`.
+Assets: project screenshots in `public/projects/`, résumé at `public/resume.pdf`,
+portrait at `public/me_black_white.png`. The favicon (`app/icon.png` +
+`app/apple-icon.png`) is the logo mark composited on gold so it reads on dark
+and light browser tabs — regenerate via sharp if the mark changes.
+
+> Build tip: if `next build` fails fetching Google Fonts on Windows, set
+> `NODE_OPTIONS=--dns-result-order=ipv4first` and retry.
 
 ## Commands
 

@@ -30,13 +30,13 @@ const plex = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: `${site.name} — Full-stack Engineer & Designer`,
+  title: `${site.name} — ${site.role}`,
   description:
-    "Full-stack engineer and designer in Jakarta, crafting fast, considered digital products — from the database schema to the last pixel.",
+    "Software engineer in Jakarta building enterprise-grade platforms end to end — typed, tested, and considered down to the last pixel.",
   openGraph: {
-    title: `${site.name} — Full-stack Engineer & Designer`,
+    title: `${site.name} — ${site.role}`,
     description:
-      "Full-stack engineer and designer crafting fast, considered digital products.",
+      "Software engineer building enterprise-grade platforms end to end — typed, tested, and considered down to the last pixel.",
     url: site.url,
     siteName: site.name,
     locale: "en_US",

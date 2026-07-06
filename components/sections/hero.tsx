@@ -114,7 +114,7 @@ export default function Hero() {
               transition={{ duration: 1.1, delay: d(0.6), ease: EASE }}
             />
             <span className="font-mono text-[11px] uppercase tracking-[0.32em] text-ink-dim">
-              Full-stack engineer <span className="text-accent">&amp;</span> designer
+              Software engineer <span className="text-accent">·</span> end to end
             </span>
           </motion.span>
 
